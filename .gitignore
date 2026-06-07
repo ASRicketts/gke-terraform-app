@@ -1,0 +1,37 @@
+# --- Terraform ---
+# Local state + backups — never commit (can contain secrets in plaintext).
+*.tfstate
+*.tfstate.*
+# Provider plugins / module cache.
+.terraform/
+.terraform.tfstate.lock.info
+# Crash logs.
+crash.log
+crash.*.log
+# Variable files with real values — keep the .example committed.
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+# .terraform.lock.hcl is intentionally NOT ignored — it's committed so
+# provider versions stay reproducible.
+
+# --- Node / app ---
+node_modules/
+npm-debug.log*
+*.log
+
+# --- Secrets / env ---
+# Keep .env.example committed.
+.env
+*.env
+.env.*
+!.env.example
+
+# --- OS / editor junk ---
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*~
+.vscode/
+.idea/
